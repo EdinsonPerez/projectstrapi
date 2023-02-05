@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "administrator1s",
+  "info": {
+    "singularName": "administrator1",
+    "pluralName": "administrator1s",
+    "displayName": "Administrator",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "role": {
+      "type": "string"
+    }
+  }
+}

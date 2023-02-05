@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cloudserver1s",
+  "info": {
+    "singularName": "cloudserver1",
+    "pluralName": "cloudserver1s",
+    "displayName": "Cloudserver",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    },
+    "processing": {
+      "type": "integer"
+    },
+    "memoryram": {
+      "type": "integer"
+    },
+    "storageSSD": {
+      "type": "integer"
+    },
+    "transfer": {
+      "type": "integer"
+    },
+    "image": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "category": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::category1.category1"
+    },
+    "customers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::customer1.customer1",
+      "mappedBy": "cloudserver"
+    }
+  }
+}

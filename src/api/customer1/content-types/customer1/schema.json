@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "customer1s",
+  "info": {
+    "singularName": "customer1",
+    "pluralName": "customer1s",
+    "displayName": "Customer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "username": {
+      "type": "string",
+      "required": true
+    },
+    "firstname": {
+      "type": "string"
+    },
+    "lastname": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "password": {
+      "type": "password"
+    },
+    "adress": {
+      "type": "text"
+    },
+    "phonenumber": {
+      "type": "string"
+    },
+    "cloudserver": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::cloudserver1.cloudserver1",
+      "inversedBy": "customers"
+    }
+  }
+}
